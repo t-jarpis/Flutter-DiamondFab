@@ -34,7 +34,7 @@ class DiamondNotchedFab extends StatefulWidget {
   /// The widget that is below this widget on the tree.
   ///
   /// Ussually an [Icon]
-  final Widget child;
+  final Widget? child;
 
   /// The margin of the notch around the floating action button
   ///
@@ -49,12 +49,12 @@ class DiamondNotchedFab extends StatefulWidget {
   /// The color to use when filling the button.
   ///
   /// Defaults to [ThemeData.accentColor] for the current theme.
-  final Color backgroundColor;
+  final Color? backgroundColor;
 
   /// The default icon and text color.
   ///
   /// Defaults to [ThemeData.accentIconTheme.color] for the current theme.
-  final Color foregroundColor;
+  final Color? foregroundColor;
 
   /// The z-coordinate at which to place this button. This controls the size of
   /// the shadow below the floating action button.
@@ -66,7 +66,7 @@ class DiamondNotchedFab extends StatefulWidget {
   ///
   /// This text is displayed to the user when they long press the
   /// floating action button.  It is used for accessability.
-  final String tooltip;
+  final String? tooltip;
 
   /// The callback function that is called when the button is tapped.
   ///
@@ -104,11 +104,11 @@ class DiamondNotchedFab extends StatefulWidget {
   final double borderRadius;
 
   DiamondNotchedFab({
-    Key key,
+    Key? key,
     this.child,
     this.notchMargin: 8.0,
     this.backgroundColor,
-    @required this.onPressed,
+    required this.onPressed,
     this.foregroundColor,
     this.tooltip,
     this.heroTag: const _DefaultHeroTag(),

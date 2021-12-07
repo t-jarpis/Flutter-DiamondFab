@@ -11,13 +11,14 @@ class DiamondFabNotchedShape extends NotchedShape {
   final double borderRadius;
 
   DiamondFabNotchedShape({
-    Key key,
+    Key? key,
     this.borderRadius: 16.0,
   });
 
+
   @override
-  Path getOuterPath(Rect host, Rect guest) {
-    final Rect fabMargin = guest.inflate(12);
+  Path getOuterPath(Rect host, Rect? guest) {
+    final Rect fabMargin = guest!.inflate(12);
     double radius = 10;
     final Rect intersection = fabMargin.intersect(host);
     final double notchCenter = intersection.height *
